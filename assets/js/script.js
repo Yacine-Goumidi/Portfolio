@@ -2,7 +2,7 @@ const panels = document.querySelectorAll('.panel');
 
 panels.forEach(panel => {
     panel.addEventListener('click', (e) => {
-        e.preventDefault(); // empêche la navigation immédiate
+        e.preventDefault(); // empêche navigation immédiate
 
         removeActiveClasses();
         panel.classList.add('active');
