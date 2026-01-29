@@ -1,3 +1,42 @@
+/* ========================================
+   Style.css – Home / Barre de projets
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f0f14;
+    color: #eaeaea;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ================= Header ================= */
+.portfolio-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.portfolio-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.portfolio-header p {
+    font-size: 1.2rem;
+    color: #cccccc;
+}
+
+/* ================= Barre de projets ================= */
 .projects-bar {
     width: 100%;
     padding: 40px 0;
@@ -5,29 +44,35 @@
 
 .projects-container {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     width: 90%;
     max-width: 1200px;
     height: 180px;
     margin: auto;
 }
 
+/* Panels */
 .panel {
     flex: 1;
     border-radius: 22px;
     position: relative;
     overflow: hidden;
     text-decoration: none;
+    cursor: pointer;
     transition:
             flex 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-            transform 0.3s ease;
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
 
 .panel:hover {
     flex: 3;
     transform: translateY(-4px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
 }
 
+/* Panel text */
 .panel span {
     position: absolute;
     bottom: 20px;
@@ -41,4 +86,54 @@
 
 .panel:hover span {
     opacity: 1;
+}
+
+/* Dégradés élégants pour chaque panel */
+.panel-1 {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.panel-2 {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.panel-3 {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+.panel-4 {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+/* ================= Footer ================= */
+.portfolio-footer {
+    text-align: center;
+    margin: 100px 0 40px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .panel:hover {
+        flex: 1; /* Pas d’expansion sur mobile */
+        transform: none;
+    }
+
+    .panel span {
+        opacity: 1; /* Toujours visible sur mobile */
+    }
+
+    .portfolio-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .portfolio-header p {
+        font-size: 1rem;
+    }
 }
