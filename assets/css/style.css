@@ -43,13 +43,14 @@ body {
     gap: 16px;
     width: 90%;
     max-width: 1200px;
-    height: 35vh; /* hauteur adaptative */
     margin: auto;
+    height: clamp(260px, 35vh, 420px); /* ✅ hauteur intelligente */
 }
 
 /* Panels */
 .panel {
     flex: 1;
+    min-width: 240px;
     border-radius: 22px;
     position: relative;
     overflow: hidden;
@@ -62,14 +63,16 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
 
-/* Hover / expansion */
-.panel:hover {
-    flex: 3;
-    transform: translateY(-4px);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+/* Expansion uniquement sur écrans larges */
+@media (hover: hover) and (min-width: 900px) {
+    .panel:hover {
+        flex: 3;
+        transform: translateY(-4px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    }
 }
 
-/* Panel text - visible sur tous les panels */
+/* Texte */
 .panel span {
     position: absolute;
     bottom: 20px;
@@ -77,11 +80,9 @@ body {
     color: #fff;
     font-size: 1rem;
     font-weight: 500;
-    opacity: 1; /* toujours visible */
-    transition: opacity 0.3s ease 0.2s;
 }
 
-/* Dégradés élégants pour chaque panel */
+/* Dégradés */
 .panel-1 { background: linear-gradient(135deg, #667eea, #764ba2); }
 .panel-2 { background: linear-gradient(135deg, #43cea2, #185a9d); }
 .panel-3 { background: linear-gradient(135deg, #ff758c, #ff7eb3); }
@@ -95,20 +96,32 @@ body {
     color: #666;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ========================= */
+/* TABLETTE (2x2) */
+/* ========================= */
+@media (max-width: 899px) {
     .projects-container {
-        flex-direction: column;
+        flex-wrap: wrap;
         height: auto;
     }
 
-    .panel:hover {
-        flex: 1; /* pas d’expansion sur mobile */
-        transform: none;
+    .panel {
+        flex: 1 1 calc(50% - 8px);
+        min-height: 220px;
+    }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+@media (max-width: 599px) {
+    .projects-container {
+        flex-direction: column;
     }
 
-    .panel.active {
-        flex: 1.5; /* actif légèrement plus grand */
+    .panel {
+        flex: 1 1 100%;
+        min-height: 180px;
     }
 
     .portfolio-header h1 {
