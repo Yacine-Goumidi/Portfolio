@@ -14,7 +14,6 @@ body {
 }
 
 /* Container général */
-.project-page,
 .project-content {
     max-width: 900px;
     margin: auto;
@@ -24,7 +23,7 @@ body {
 /* ================= Header projet ================= */
 .project-hero {
     text-align: center;
-    padding-bottom: 60px;
+    padding: 80px 20px 60px;
     border-bottom: 1px solid #222;
 }
 
@@ -40,48 +39,23 @@ body {
     margin-bottom: 30px;
 }
 
-/* Bouton téléchargement */
-.download-btn {
+/* ================= Bouton lien projet ================= */
+.project-link-btn {
     display: inline-block;
-    padding: 14px 28px;
+    padding: 14px 32px;
     border-radius: 30px;
     background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
 }
 
-.download-btn:hover {
+.project-link-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(102, 126, 234, 0.5);
-}
-
-/* ================= Sections ================= */
-section {
-    margin-top: 60px;
-}
-
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #ffffff;
-    border-left: 4px solid #667eea;
-    padding-left: 10px;
-}
-
-section p {
-    font-size: 1rem;
-    color: #cccccc;
-}
-
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 8px;
 }
 
 /* ================= Bouton retour ================= */
@@ -112,10 +86,36 @@ ul li {
 }
 
 
+/* ================= Sections ================= */
+section {
+    margin-top: 60px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    border-left: 4px solid #667eea;
+    padding-left: 10px;
+}
+
+section p {
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
 /* ================= Visuels ================= */
 .visuels img {
     width: 100%;
-    max-width: 100%;
     margin-bottom: 20px;
     border-radius: 14px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
