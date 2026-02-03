@@ -14,4 +14,13 @@ fullscreenBtn.addEventListener("click", () => {
     } else if (unityFrame.webkitRequestFullscreen) {
         unityFrame.webkitRequestFullscreen();
     }
+
+    document.addEventListener("fullscreenchange", () => {
+        if (document.fullscreenElement) {
+            fullscreenBtn.textContent = "⤫ Quitter le plein écran";
+        } else {
+            fullscreenBtn.textContent = "⛶ Plein écran";
+        }
+    });
+    
 });

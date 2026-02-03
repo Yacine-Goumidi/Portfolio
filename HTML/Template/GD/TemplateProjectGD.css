@@ -1,109 +1,187 @@
-﻿* {
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: system-ui, sans-serif;
 }
 
 body {
-    background: #0f1115;
+    font-family: 'Inter', sans-serif;
+    background: #0f0f14;
     color: #eaeaea;
     line-height: 1.6;
 }
 
+/* ================= Header projet ================= */
 .project-header {
-    padding: 3rem;
+    padding: 80px 20px 60px;
     text-align: center;
-    background: linear-gradient(135deg, #1f2933, #111827);
+    background: radial-gradient(
+            circle at top,
+            rgba(102, 126, 234, 0.15),
+            transparent 60%
+    );
+    border-bottom: 1px solid #222;
+}
+
+.project-header h1 {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    color: #ffffff;
 }
 
 .subtitle {
-    opacity: 0.7;
+    font-size: 1.2rem;
+    color: #cccccc;
+    opacity: 0.85;
 }
 
+/* ================= Contenu ================= */
 .project-content {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
-    padding: 2rem;
+    padding: 80px 20px;
 }
 
 section {
-    margin-bottom: 3rem;
+    margin-bottom: 80px;
 }
 
 h2 {
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
+    font-size: 2rem;
+    margin-bottom: 24px;
+    color: #ffffff;
+    border-left: 4px solid #667eea;
+    padding-left: 12px;
 }
 
+/* ================= Stack ================= */
 .project-stack ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 12px;
+    list-style: none;
 }
 
 .project-stack li {
-    background: #1f2933;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(6px);
 }
 
+/* ================= Screenshots ================= */
 .screenshots-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
 }
 
 .screenshots-grid img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
 }
 
+.screenshots-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* ================= Actions ================= */
 .project-actions {
     display: flex;
-    gap: 1rem;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .primary-btn,
 .secondary-btn {
-    padding: 0.8rem 1.4rem;
-    border-radius: 6px;
+    padding: 14px 32px;
+    border-radius: 30px;
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: 500;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
 }
 
+/* Bouton principal */
 .primary-btn {
-    background: #2563eb;
-    color: white;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #ffffff;
 }
 
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.5);
+}
+
+/* Bouton secondaire */
 .secondary-btn {
-    background: #1f2933;
-    color: white;
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    backdrop-filter: blur(8px);
 }
 
+.secondary-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* ================= Fullscreen Button ================= */
+#fullscreenBtn {
+    padding: 10px 22px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(8px);
+    transition:
+            transform 0.3s ease,
+            background 0.3s ease,
+            box-shadow 0.3s ease;
+}
+
+#fullscreenBtn:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(102, 126, 234, 0.4);
+}
+
+
+/* ================= Sandbox ================= */
 .game-section {
-    margin-top: 4rem;
+    margin-top: 100px;
 }
 
 .game-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
 }
 
 .game-container {
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: black;
-    border-radius: 10px;
+    background: #000;
+    border-radius: 16px;
     overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
 .game-container iframe {
@@ -112,6 +190,18 @@ h2 {
     border: none;
 }
 
+/* ================= Utils ================= */
 .hidden {
     display: none;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+    .project-header h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
 }
