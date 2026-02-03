@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Nom du Projet – Game Design</title>
+    <link rel="stylesheet" href="../../Template/GD/TemplateProjectGD.css" />
+</head>
+
+<body>
+
+<header class="project-header">
+    <h1>Nom du projet</h1>
+    <p class="subtitle">Game Design · Unity · WebGL</p>
+</header>
+
+<main class="project-content">
+
+    <!-- DESCRIPTION -->
+    <section class="project-description">
+        <h2>Description</h2>
+        <p>
+            Jeu sandbox développé sous Unity.
+            Ce prototype met en avant les mécaniques principales et le gameplay cœur du projet.
+        </p>
+    </section>
+
+    <!-- STACK -->
+    <section class="project-stack">
+        <h2>Stack technique</h2>
+        <ul>
+            <li>Unity 2022+</li>
+            <li>C#</li>
+            <li>WebGL</li>
+            <li>Game Design</li>
+        </ul>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="project-screenshots">
+        <h2>Screenshots</h2>
+        <div class="screenshots-grid">
+            <img src="../assets/screenshots/game1.png" alt="">
+            <img src="../assets/screenshots/game2.png" alt="">
+            <img src="../assets/screenshots/game3.png" alt="">
+        </div>
+    </section>
+
+    <!-- ACTIONS -->
+    <section class="project-actions">
+        <button id="playBtn" class="primary-btn">▶ Lancer la sandbox</button>
+
+        <a
+                href="../downloads/nom-du-projet.zip"
+                class="secondary-btn"
+                download>
+            ⬇ Télécharger la build complète
+        </a>
+    </section>
+
+    <!-- SANDBOX -->
+    <section id="gameSection" class="game-section hidden">
+        <div class="game-header">
+            <h2>Sandbox jouable</h2>
+            <button id="fullscreenBtn">⛶ Plein écran</button>
+        </div>
+
+        <div class="game-container">
+            <iframe
+                    id="unityFrame"
+                    src="../unity-builds/nom-du-projet/index.html"
+                    allowfullscreen
+            ></iframe>
+        </div>
+    </section>
+
+</main>
+
+<script src="../js/project.js"></script>
+</body>
+</html>
