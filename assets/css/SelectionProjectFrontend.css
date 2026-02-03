@@ -1,0 +1,164 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f0f14;
+    color: #eaeaea;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ================= Bouton retour ================= */
+.back-btn {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    transition:
+            background 0.3s ease,
+            transform 0.3s ease;
+    z-index: 100;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+
+
+
+/* Header */
+.SelectionPage-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.SelectionPage-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.SelectionPage-header p {
+    font-size: 1.2rem;
+    color: #cccccc;
+}
+
+/* Barre de projets */
+.projects-bar {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.projects-container {
+    display: flex;
+    gap: 16px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    height: clamp(260px, 35vh, 420px); /* ✅ hauteur intelligente */
+}
+
+/* Panels */
+.panel {
+    flex: 1;
+    min-width: 240px;
+    border-radius: 22px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+            flex 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* Expansion uniquement sur écrans larges */
+@media (hover: hover) and (min-width: 900px) {
+    .panel:hover {
+        flex: 3;
+        transform: translateY(-4px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    }
+}
+
+/* Texte */
+.panel span {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Dégradés */
+.panel-1 { background: linear-gradient(135deg, #667eea, #764ba2); }
+.panel-2 { background: linear-gradient(135deg, #43cea2, #185a9d); }
+.panel-3 { background: linear-gradient(135deg, #ff758c, #ff7eb3); }
+.panel-4 { background: linear-gradient(135deg, #f7971e, #ffd200); }
+
+/* Footer */
+.Page-footer {
+    text-align: center;
+    margin: 100px 0 40px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ========================= */
+/* TABLETTE (2x2) */
+/* ========================= */
+@media (max-width: 899px) {
+    .projects-container {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .panel {
+        flex: 1 1 calc(50% - 8px);
+        min-height: 220px;
+    }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+@media (max-width: 599px) {
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .panel {
+        flex: 1 1 100%;
+        min-height: 180px;
+    }
+
+    .portfolio-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .portfolio-header p {
+        font-size: 1rem;
+    }
+}
