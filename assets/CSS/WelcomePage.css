@@ -24,15 +24,12 @@ body {
     inset: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(15, 23, 42, 0.75);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background: rgba(10, 12, 20, 0.92); /* stable partout */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
 }
-
 
 .maintenance-box {
     color: white;
@@ -166,19 +163,15 @@ body {
         font-size: 1rem;
     }
 
-    /* Tu peux garder ces règles si un jour tu veux
-       un style différent sur mobile */
+    /* possibilité future d'un style différent */
     .maintenance-overlay {
         position: fixed;
         inset: 0;
-        background: rgba(15, 23, 42, 0.75);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
+        background: rgba(10, 12, 20, 0.92);
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 9999;
-        font-family: Arial, sans-serif;
     }
 
     .maintenance-box {
