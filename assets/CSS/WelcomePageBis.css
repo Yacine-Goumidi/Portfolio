@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
 * {
     box-sizing: border-box;
@@ -164,33 +164,4 @@ body {
         font-size: 1rem;
     }
 
-    /* Tu peux garder ces règles si un jour tu veux
-       un style différent sur mobile */
-    .maintenance-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(15, 23, 42, 0.75);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-        font-family: Arial, sans-serif;
-    }
-
-    .maintenance-box {
-        color: white;
-        text-align: center;
-        padding: 2rem;
-    }
-
-    .maintenance-box h1 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    .maintenance-box p {
-        opacity: 0.85;
-    }
 }
