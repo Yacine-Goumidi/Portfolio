@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Photographe</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* =================== Global =================== */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f0f14;
+            color: #eaeaea;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =================== Bouton retour =================== */
+        .back-btn {
+            position: fixed;
+            top: 24px;
+            left: 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.06);
+            color: #ffffff;
+            opacity: 0.85;
+            font-size: 0.9rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            transition: background 0.3s ease, transform 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+            opacity: 1;
+        }
+
+        /* =================== Header =================== */
+        .project-hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            border-bottom: 1px solid #222;
+        }
+
+        .project-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .project-hero p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        .project-link-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #ffffff;
+            font-weight: 500;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-link-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        /* =================== Container =================== */
+        .project-content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        section {
+            margin-top: 60px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            border-left: 4px solid #667eea;
+            padding-left: 10px;
+        }
+
+        section p {
+            font-size: 1rem;
+            color: #cccccc;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        /* =================== Galerie =================== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover {
+            box-shadow: 0 15px 40px rgba(102,126,234,0.5);
+        }
+
+        /* =================== Modal =================== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 200;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 14px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .modal-close:hover {
+            color: #ccc;
+        }
+
+        #caption {
+            text-align: center;
+            color: #fff;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        /* =================== Footer =================== */
+        .project-footer {
+            text-align: center;
+            margin: 100px 0 40px;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid #222;
+            padding-top: 20px;
+        }
+
+        /* =================== Responsive =================== */
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2.2rem;
+            }
+            .project-hero p {
+                font-size: 1rem;
+            }
+            section h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<a href="SelectionProjectPhotography.html" class="back-btn">← Retour</a>
+
+<!-- Header -->
+<header class="project-hero">
+    <h1>Mon Portfolio Photo</h1>
+    <p>Découvrez une sélection de mes meilleures photos</p>
+    <a href="#" class="project-link-btn" target="_blank" rel="noopener noreferrer">Voir plus de projets</a>
+</header>
+
+<!-- Contenu -->
+<main class="project-content">
+
+    <!-- Galerie -->
+    <section class="gallery">
+        <h2>Portfolio</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="../../../assets/Images/project1Screenshot1.png" alt="Photo 1"></div>
+            <div class="gallery-item"><img src="../../../assets/Images/project1Screenshot2.png" alt="Photo 2"></div>
+            <div class="gallery-item"><img src="../../../assets/Images/project1Screenshot3.png" alt="Photo 3"></div>
+            <div class="gallery-item"><img src="../../../assets/Images/project1Screenshot4.png" alt="Photo 4"></div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Modal pour voir les images en grand -->
+<div id="modal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="caption"></div>
+</div>
+
+<!-- Footer -->
+<footer class="project-footer">
+    <p>&copy; 2026 – Mon Portfolio</p>
+</footer>
+
+<script>
+    // Modal script
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const caption = document.getElementById("caption");
+
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.onclick = () => {
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            caption.innerText = img.alt;
+        }
+    });
+
+    document.querySelector(".modal-close").onclick = () => {
+        modal.style.display = "none";
+    }
+</script>
+
+</body>
+</html>
