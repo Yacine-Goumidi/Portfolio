@@ -2,149 +2,16 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Photography Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Photographe</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #0f0f14;
-            color: #eaeaea;
-            margin: 0;
-        }
-
-        /* ================= HEADER ================= */
-        header {
-            text-align: center;
-            padding: 100px 20px 60px;
-            border-bottom: 1px solid #222;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            color: #aaa;
-        }
-
-        /* ================= FILTRES ================= */
-        .filters {
-            text-align: center;
-            margin: 50px 0;
-        }
-
-        .filter-btn {
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 30px;
-            border: 1px solid #444;
-            background: transparent;
-            color: white;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border: none;
-        }
-
-        /* ================= GALERIE MASONRY ================= */
-        .gallery {
-            column-count: 4;
-            column-gap: 20px;
-            padding: 0 40px 100px;
-        }
-
-        .gallery-item {
-            break-inside: avoid;
-            margin-bottom: 20px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 16px;
-            cursor: pointer;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            display: block;
-            border-radius: 16px;
-            transition: transform 0.6s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.08);
-        }
-
-        /* Overlay */
-        .overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
-            display: flex;
-            align-items: flex-end;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .overlay h3 {
-            margin: 0;
-        }
-
-        .gallery-item:hover .overlay {
-            opacity: 1;
-        }
-
-        /* ================= MODAL ================= */
-        .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.95);
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-
-        .modal img {
-            max-width: 90%;
-            max-height: 85%;
-            border-radius: 16px;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 30px;
-            right: 40px;
-            font-size: 40px;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* ================= RESPONSIVE ================= */
-        @media (max-width: 1200px) {
-            .gallery { column-count: 3; }
-        }
-        @media (max-width: 900px) {
-            .gallery { column-count: 2; }
-        }
-        @media (max-width: 600px) {
-            .gallery { column-count: 1; padding: 0 20px 60px; }
-        }
-    </style>
+    
+    <link rel="stylesheet" href="../../../assets/CSS/ProjectPage/projectType3.css">
 </head>
 <body>
 
-<header>
-    <h1>Mon Portfolio</h1>
-    <p>Sélection de mes travaux récents</p>
+<header class="project-hero">
+    <h1>Photography Portfolio</h1>
+    <p>Découvrez mon univers visuel</p>
 </header>
 
 <!-- FILTRES -->
@@ -152,44 +19,233 @@
     <button class="filter-btn active" data-filter="all">Tout</button>
     <button class="filter-btn" data-filter="portrait">Portrait</button>
     <button class="filter-btn" data-filter="mariage">Mariage</button>
-    <button class="filter-btn" data-filter="paysage">Paysage</button>
+    <button class="filter-btn" data-filter="sport">Paysage</button>
     <button class="filter-btn" data-filter="urbain">Urbain</button>
 </div>
 
-<!-- GALERIE -->
-<div class="gallery">
+<!-- ================= GALERIE ================= -->
+<section class="gallery">
 
-    <div class="gallery-item" data-category="portrait">
-        <img src="../../../assets/Images/project1Screenshot1.png" alt="">
-        <div class="overlay"><h3>Portrait</h3></div>
-    </div>
+        <div class="gallery-item" data-category="portrait">
+            <img src="../../../assets/Images/photo/photo1.JPG" alt="">
+            <div class="overlay"><h3>Portrait</h3></div>
+        </div>
 
-    <div class="gallery-item" data-category="mariage">
-        <img src="../../../assets/Images/project1Screenshot2.png" alt="">
-        <div class="overlay"><h3>Mariage</h3></div>
-    </div>
+        <div class="gallery-item" data-category="mariage" >
+            <img src="../../../assets/Images/photo/Photo2.JPG" alt="">
+            <div class="overlay"><h3>Mariage</h3></div>
+        </div>
 
-    <div class="gallery-item" data-category="paysage">
-        <img src="../../../assets/Images/project1Screenshot3.png" alt="">
-        <div class="overlay"><h3>Paysage</h3></div>
-    </div>
+        <div class="gallery-item" data-category="paysage">
+            <img src="../../../assets/Images/photo/Photo3.JPG" alt="">
+            <div class="overlay"><h3>Paysage</h3></div>
+        </div>
 
-    <div class="gallery-item" data-category="urbain">
-        <img src="../../../assets/Images/project1Screenshot4.png" alt="">
-        <div class="overlay"><h3>Urbain</h3></div>
-    </div>
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo4.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
 
-    <!-- Duplique et change data-category pour ajouter plus d'images -->
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo5.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
 
-</div>
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo6.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
 
-<!-- MODAL -->
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo7.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo8.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo9.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo10.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo11.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo12.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo13.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo14.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo15.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo16.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo17.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo18.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo19.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo20.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo21.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo22.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo23.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo24.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo25.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo26.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo27.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo28.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo29.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo30.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo31.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo32.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo33.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo34.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo35.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo36.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo37.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo38.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo39.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo40.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+        <div class="gallery-item" data-category="urbain">
+            <img src="../../../assets/Images/photo/Photo41.JPG" alt="">
+            <div class="overlay"><h3>Urbain</h3></div>
+        </div>
+
+
+        <!-- Duplique et change data-category pour ajouter plus d'images -->
+
+</section>
+
+<!-- ================= MODAL ================= -->
 <div class="modal" id="modal">
     <span class="modal-close" id="closeModal">&times;</span>
     <img id="modalImg">
 </div>
 
 <script>
+
+    /* ================= FILTRE ================= */
+
     const filterButtons = document.querySelectorAll(".filter-btn");
     const items = document.querySelectorAll(".gallery-item");
 
@@ -199,35 +255,52 @@
             document.querySelector(".filter-btn.active").classList.remove("active");
             button.classList.add("active");
 
-            const filter = button.getAttribute("data-filter");
+            const filter = button.dataset.filter;
 
             items.forEach(item => {
                 if (filter === "all" || item.dataset.category === filter) {
                     item.style.display = "block";
-                    setTimeout(() => item.style.opacity = "1", 10);
                 } else {
-                    item.style.opacity = "0";
-                    setTimeout(() => item.style.display = "none", 300);
+                    item.style.display = "none";
                 }
             });
         });
     });
 
-    /* Modal */
+
+    /* ================= MODAL ================= */
+
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modalImg");
     const closeModal = document.getElementById("closeModal");
 
     document.querySelectorAll(".gallery-item img").forEach(img => {
         img.addEventListener("click", () => {
-            modal.style.display = "flex";
+            modal.classList.add("active");
             modalImg.src = img.src;
+            document.body.style.overflow = "hidden";
         });
     });
 
-    closeModal.onclick = () => modal.style.display = "none";
-    modal.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
-    document.addEventListener("keydown", e => { if (e.key === "Escape") modal.style.display = "none"; });
+    function closeGalleryModal() {
+        modal.classList.remove("active");
+        document.body.style.overflow = "auto";
+    }
+
+    closeModal.addEventListener("click", closeGalleryModal);
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            closeGalleryModal();
+        }
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            closeGalleryModal();
+        }
+    });
+
 </script>
 
 </body>

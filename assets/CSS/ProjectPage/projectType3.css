@@ -1,0 +1,108 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f14;
+    color: white;
+}
+
+/* HEADER */
+.project-hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.project-hero h1 {
+    font-size: 3rem;
+}
+
+.project-hero p {
+    color: #aaa;
+}
+
+/* FILTRES */
+.filters {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #667eea;
+}
+
+/* GALERIE STYLE PINTEREST */
+.gallery {
+    column-count: 3;
+    column-gap: 15px;
+    width: 90%;
+    margin: auto;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        column-count: 1;
+    }
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 14px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+}
