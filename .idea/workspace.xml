@@ -5,37 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61e85443-50f7-4218-a3c2-c66c15bb48f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo32.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo33.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo34.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo35.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo36.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo37.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo38.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo39.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo40.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo41.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo42.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo43.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo44.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo45.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo46.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo47.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo48.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo49.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo50.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo51.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo52.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo53.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo54.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo55.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo56.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo57.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo58.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo59.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Images/photo/Photo60.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/Projects/SelectionPhotography/ProjectPhotography.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/Projects/SelectionPhotography/ProjectPhotography.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +74,7 @@
       <workItem from="1770571053988" duration="3951000" />
       <workItem from="1770638311834" duration="5979000" />
       <workItem from="1772470956392" duration="7770000" />
-      <workItem from="1772535860823" duration="408000" />
+      <workItem from="1772535860823" duration="1852000" />
     </task>
     <servers />
   </component>
